@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bd4x7ka8cuesf"]
+[gd_scene load_steps=8 format=3 uid="uid://bd4x7ka8cuesf"]
 
 [ext_resource type="MeshLibrary" uid="uid://cop7mium5enx2" path="res://mesh_libraries/space_library.tres" id="1_7s1rk"]
+[ext_resource type="PackedScene" uid="uid://da6wvgvna11sn" path="res://enemy/enemy.tscn" id="2_wnmco"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vmw68"]
 sky_top_color = Color(6.73831e-07, 0.688762, 0.816985, 1)
@@ -22,7 +23,7 @@ albedo_color = Color(0.418463, 0.333416, 0.257105, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_xctt1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -36, 0, 2, -1, 0, -1, 1, 0, 1, -15, 0, 2, -1, 0, -1, 2, 0, 0.5, -12, 0, 10, -2, 0, 0, 2, 0, 0, 2, 0, 10, -2, 0, 0.5, 1, 0, -1, 17, 0, 9, 1, 0, 1, -2, 0, -1, 17, 0, -5, 2, 0, 2, -2, 0, -2, -10, 0, -6, 0, 0, 0, 0, 0, 0, -10, 0, -23),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -33.2893, 0, 2, -1, 0, -1, 1, 0, 1, -15, 0, 2, -1, 0, -1, 2, 0, 0.5, -12, 0, 10, -2, 0, 0, 2, 0, 0, 2, 0, 10, -2, 0, 0.5, 1, 0, -1, 17, 0, 9, 1, 0, 1, -2, 0, -1, 17, 0, -5, 2, 0, 2, -2, 0, -2, -10, 0, -6, 0, 0, 0, 0, 0, 0, -10, 0, -21),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 8
@@ -94,3 +95,7 @@ path_local = false
 path_continuous_u = true
 path_u_distance = 1.0
 path_joined = false
+
+[node name="Enemy" parent="Path3D" instance=ExtResource("2_wnmco")]
+transform = Transform3D(-4.37111e-08, 0, -0.999994, 0, 1, 0, 0.999994, 0, -4.37111e-08, -33.2893, 0, 2)
+movement_speed = 5.0
