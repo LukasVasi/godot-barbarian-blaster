@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfxmcogyimolx"]
+
+[ext_resource type="Script" path="res://base/base.gd" id="1_4irnw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fhyje"]
+albedo_color = Color(0.975446, 0, 0.0319604, 1)
+
+[node name="Base" type="Node3D" groups=["Base"]]
+script = ExtResource("1_4irnw")
+max_health = 5
+
+[node name="HealthLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+billboard = 1
+modulate = Color(0.99473, 0, 0.122003, 1)
+text = "Health"
+font_size = 500
+outline_size = 64
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+radius = 2.0
+height = 4.0
+sides = 16
+material = SubResource("StandardMaterial3D_fhyje")
